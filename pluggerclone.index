@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugger | Mi Perfil</title>
+    <style>
+        /* Estilo Minimalista */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+            color: #1a1a1a;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff6b00; /* Tu naranja */
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            background-color: #ddd;
+            border-radius: 50%;
+        }
+
+        .btn-action {
+            display: block;
+            width: 100%;
+            background-color: #ff6b00;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-action:hover {
+            background-color: #e65a00;
+        }
+
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .menu-item {
+            background: white;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ff6b00;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Plugger</div>
+        <div style="font-size: 20px;">🔔</div>
+    </header>
+
+    <div class="container">
+        <div class="profile-card">
+            <div class="avatar"></div>
+            <div>
+                <h2 style="margin: 0; font-size: 1.2rem;">Usuario Plugger</h2>
+                <p style="margin: 5px 0; color: #666; font-size: 0.9rem;">"La más grande mentira es finjir en mi cara que soy feliz.."</p>
+            </div>
+        </div>
+
+        <a href="#" class="btn-action">+ Comparte tus fotos</a>
+
+        <ul class="menu-list">
+            <li class="menu-item">Actividades</li>
+            <li class="menu-item">Conversaciones <strong>(9+)</strong></li>
+            <li class="menu-item">Fotos y Videos</li>
+            <li class="menu-item">Redes Conectadas</li>
+        </ul>
+    </div>
+
+</body>
+</html>
