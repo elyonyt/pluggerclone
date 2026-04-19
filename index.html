@@ -5,83 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plugger | Mi Perfil</title>
     <style>
-        /* Estilo Minimalista */
+        /* Estilo Minimalista y Redondeado */
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             margin: 0;
-            background-color: #f5f5f5;
+            background-color: #ffffff; /* Fondo blanco puro para limpieza */
             color: #1a1a1a;
         }
 
         header {
             background-color: #fff;
-            padding: 15px 20px;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #f0f0f0;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ff6b00; /* Tu naranja */
+            font-size: 22px;
+            font-weight: 800;
+            color: #ff6b00;
+            letter-spacing: -1px;
         }
 
         .container {
-            max-width: 500px;
+            max-width: 450px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 25px;
         }
 
-        .profile-card {
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
+        /* Perfil Circular */
+        .profile-section {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         .avatar {
-            width: 80px;
-            height: 80px;
-            background-color: #ddd;
-            border-radius: 50%;
+            width: 110px;
+            height: 110px;
+            background-color: #f2f2f2;
+            border-radius: 50%; /* Círculo perfecto */
+            margin-bottom: 15px;
+            border: 3px solid #ff6b00; /* Aro naranja sutil */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
+        .username {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .status-text {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 8px 0;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        /* Botón muy redondeado */
         .btn-action {
             display: block;
-            width: 100%;
             background-color: #ff6b00;
             color: white;
             text-align: center;
-            padding: 12px;
-            border-radius: 25px;
+            padding: 16px;
+            border-radius: 50px; /* Bordes tipo pastilla */
             text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: 0.3s;
+            font-weight: 600;
+            margin-bottom: 35px;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.2);
         }
 
-        .btn-action:hover {
-            background-color: #e65a00;
-        }
-
+        /* Lista de opciones con diseño redondo */
         .menu-list {
             list-style: none;
             padding: 0;
-            margin-top: 20px;
         }
 
         .menu-item {
-            background: white;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-radius: 10px;
-            border-left: 4px solid #ff6b00;
-            cursor: pointer;
+            background: #f9f9f9;
+            margin-bottom: 12px;
+            padding: 18px 25px;
+            border-radius: 40px; /* Redondeado en las puntas */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.2s;
+            font-weight: 500;
+            border: 1px solid transparent;
+        }
+
+        .menu-item:hover {
+            background: #ffffff;
+            border: 1px solid #ff6b00;
+            transform: scale(1.02);
+        }
+
+        .count {
+            background-color: #ff6b00;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -89,26 +122,38 @@
 
     <header>
         <div class="logo">Plugger</div>
-        <div style="font-size: 20px;">🔔</div>
+        <div style="cursor: pointer; font-size: 1.2rem;">⚙️</div>
     </header>
 
     <div class="container">
-        <div class="profile-card">
-            <div class="avatar"></div>
-            <div>
-                <h2 style="margin: 0; font-size: 1.2rem;">Usuario Plugger</h2>
-                <p style="margin: 5px 0; color: #666; font-size: 0.9rem;">"La más grande mentira es finjir en mi cara que soy feliz.."</p>
+        <div class="profile-section">
+            <div class="avatar">
+                <span style="font-size: 40px; opacity: 0.3;">👤</span>
             </div>
+            <h2 class="username">Usuario Plugger</h2>
+            <p class="status-text">"La más grande mentira es finjir en mi cara que soy feliz.."</p>
         </div>
 
         <a href="#" class="btn-action">+ Comparte tus fotos</a>
 
-        <ul class="menu-list">
-            <li class="menu-item">Actividades</li>
-            <li class="menu-item">Conversaciones <strong>(9+)</strong></li>
-            <li class="menu-item">Fotos y Videos</li>
-            <li class="menu-item">Redes Conectadas</li>
-        </ul>
+        <div class="menu-list">
+            <div class="menu-item">
+                <span>Actividades</span>
+                <span>➔</span>
+            </div>
+            <div class="menu-item">
+                <span>Conversaciones</span>
+                <span class="count">9+</span>
+            </div>
+            <div class="menu-item">
+                <span>Fotos y Videos</span>
+                <span>➔</span>
+            </div>
+            <div class="menu-item">
+                <span>Información de perfil</span>
+                <span>➔</span>
+            </div>
+        </div>
     </div>
 
 </body>
